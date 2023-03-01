@@ -52,6 +52,8 @@ clf = setup(data=train_data,
             categorical_imputation="mode") # 分類データの欠損は最頻値適用
 
 best_model = compare_models()  # 全てのモデルを訓練し、評価する
+# 最適モデルは勾配ブースティング決定木でした。
+#   「勾配降下法 (Gradient)」と「アンサンブル学習 (Boosting)」、「決定木 (Decision Tree)」の3つの手法が組み合わされた機械学習の手法とのことです。
 
 tuned_gbc = tune_model(best_model)  # ハイパーパラメータ？の調整をする
 # ハイパーパラメータとは
